@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <a href="https://alshabili.site/" class="back-link">&larr; Portfolio</a>
+    <div class="main-container">
+
+        <div class="header-container">
+            <h1>SQL Practice</h1>
+            <button id="help-button">Help</button>
+        </div>
+
+        <textarea id="sql-input" placeholder="Enter SQL commands here..."></textarea>
+        <button id="run-sql-button">Run SQL</button>
+
+        <div class="output-section">
+             <div class="output-header">
+                <h2>Output</h2>
+                <button id="pin-output-button" title="Pin current output below">Pin Output</button>
+            </div>
+            <div id="output-area">
+                Initializing SQL engine... Please wait.
+            </div>
+        </div>
+
+        <div id="pinned-outputs-container">
+            <h2>Pinned Outputs</h2>
+            <div id="pinned-outputs">
+                </div>
+        </div>
+
+    </div> <div id="help-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-help-button" class="modal-close-button">&times;</button>
+            <h2>Help & Examples</h2>
+            <p><strong>Getting Started:</strong></p>
+            <ul>
+                <li>Type SQL commands into the input box (the "shell").</li>
+                <li>Click the "Run SQL" button or press <code>Ctrl+Enter</code>or <code>Cmd+Enter</code> (Mac) to execute.</li>
+                <li>The results of your commands (or any errors) will appear in the "Output" area.</li>
+                <li>If a command runs successfully, the input box will clear automatically.</li>
+                </ul>
+            <p><strong>Pinning Output:</strong></p>
+            <ul>
+                <li>After running a command (like a <code>SELECT</code> query), click the "Pin Output" button next to the Output title.</li>
+                <li>A copy of the current output will appear in the "Pinned Outputs" section below.</li>
+                <li>This is useful for keeping table data or results visible while you run other commands.</li>
+                <li>Click the red 'X' on a pinned item to remove it.</li>
+            </ul>
+            <p><strong>Example Workflow:</strong></p>
+            <ol>
+                <li>Create a table: <br><code>CREATE TABLE products (id INTEGER PRIMARY KEY, name TEXT NOT NULL, price REAL);</code></li>
+                <li>Insert data: <br><code>INSERT INTO products (name, price) VALUES ('Laptop', 1200.50), ('Mouse', 25.00);</code></li>
+                <li>View data: <br><code>SELECT * FROM products;</code></li>
+                <li>Click "Pin Output" to keep the product list visible.</li>
+                <li>Query specific data: <br><code>SELECT name, price FROM products WHERE price < 100;</code></li>
+            </ol>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

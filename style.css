@@ -1,0 +1,204 @@
+.back-link {
+    position: fixed; 
+    top: 10px;       
+    left: 10px;      
+    z-index: 10;     
+    text-decoration: none;
+    color: #0056b3; 
+    font-size: 14px;
+    padding: 5px 8px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(255, 255, 255, 0.9); 
+    text-decoration: underline;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    }
+    .main-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+    }
+    .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    }
+    h1, h2 {
+    color: #333;
+    margin-left: 0;
+    margin-right: 0;
+    }
+    h2 {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    }
+    .header-container h1,
+    .output-header h2 {
+    flex-grow: 1;
+    text-align: center;
+    }
+    .header-container h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+    .header-container #help-button,
+    .output-header #pin-output-button {
+    flex-shrink: 0;
+    margin-left: 15px;
+    }
+    #help-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    }
+    #help-button:hover {
+    background-color: #138496;
+    }
+    p {
+    margin-bottom: 1em;
+    }
+    #sql-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    resize: vertical;
+    }
+    #run-sql-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: block;
+    }
+    #run-sql-button:hover {
+    background-color: #0056b3;
+    }
+    .output-section {
+    margin-bottom: 20px;
+    }
+    .output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    }
+    #pin-output-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    }
+    #pin-output-button:hover {
+    background-color: #5a6268;
+    }
+    #output-area {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    font-size: 14px;
+    overflow-x: auto;
+    }
+    #output-area table { border-collapse: collapse; width: 100%; margin-top: 10px; border: 1px solid #ddd; }
+    #output-area th, #output-area td { border: 1px solid #ddd; padding: 8px; text-align: left; white-space: nowrap; }
+    #output-area th { background-color: #e9e9e9; font-weight: bold; }
+    #output-area .error-message { color: #dc3545; font-weight: bold; white-space: pre-wrap; }
+    #output-area .success-message { color: #28a745; font-weight: bold; }
+    #pinned-outputs-container {
+    margin-top: 20px;
+    }
+    #pinned-outputs-container h2 {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.5em;
+    }
+    #pinned-outputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 10px;
+    }
+    .pinned-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 25px;
+    position: relative;
+    flex: 1 1 300px;
+    max-width: calc(50% - 8px);
+    min-width: 280px;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    }
+    .pinned-item .close-pinned { position: absolute; top: 5px; right: 5px; background: #dc3545; color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 12px; line-height: 1; width: 18px; height: 18px; padding: 0; font-weight: bold; }
+    .pinned-item .close-pinned:hover { background: #c82333; }
+    .pinned-item table { border-collapse: collapse; width: 100%; margin-top: 10px; border: 1px solid #ddd; font-size: 13px; }
+    .pinned-item th, .pinned-item td { border: 1px solid #ddd; padding: 6px; text-align: left; white-space: nowrap; }
+    .pinned-item th { background-color: #e9e9e9; font-weight: bold; }
+    .pinned-item .error-message { color: #dc3545; font-weight: bold; white-space: pre-wrap; font-size: 13px; }
+    .pinned-item .success-message { color: #28a745; font-weight: bold; font-size: 13px; }
+    .modal-overlay { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
+    .modal-content { background-color: #fefefe; margin: auto; padding: 20px 30px; border: 1px solid #888; width: 80%; max-width: 650px; border-radius: 8px; position: relative; max-height: 85vh; overflow-y: auto; }
+    .modal-close-button { position: absolute; top: 10px; right: 15px; color: #aaa; font-size: 28px; font-weight: bold; background: none; border: none; cursor: pointer; line-height: 1; }
+    .modal-close-button:hover, .modal-close-button:focus { color: black; text-decoration: none; }
+    .modal-content h2 { margin-top: 0; }
+    .modal-content code { background-color: #e0e0e0; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
+    code {
+    background-color: #e0e0e0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    }
+    @media (max-width: 700px) {
+    .pinned-item {
+    flex-basis: 100%;
+    max-width: 100%;
+    }
+    .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    #help-button {
+    margin-top: 10px;
+    margin-left: 0;
+    }
+    }
