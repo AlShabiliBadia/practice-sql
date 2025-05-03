@@ -10,6 +10,16 @@ It lets you run SQL queries (using the standard SQLite syntax via sql.js) direct
 * **Browser-Based:** Runs entirely in your browser using sql.js. No installation, no server required, just open and start typing.
 * **Simple Workflow:** Input clears on success; use `Ctrl+Enter` or `Cmd+Enter`  to run commands quickly.
 
+## How to Use
+1.  **Live Demo:** Visit the live application here: [https://alshabili.site/practice-sql/](https://alshabili.site/practice-sql/)
+    *(Or open `index.html` locally in your browser)*
+2.  Type SQL into the input box.
+3.  Click "Run SQL" or press `Ctrl+Enter` / `Cmd+Enter`.
+4.  View results in the "Output" area.
+5.  Click "Pin Output" (when a table is shown) to keep it below. Use the 'X' to remove pinned items.
+6.  Click the "Help" button for examples.
+
+
 ## Technology Stack
 * HTML5
 * CSS3 
